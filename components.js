@@ -11,9 +11,23 @@ for (let key in FinancialAdvisor) {
 
 document.querySelector("#output").appendChild(fragment)
 
+/*
+    Example final data structure:
+
+    tickers = {
+        "GE": 7589576895,
+        "AAPL": 495484539,
+        "MSFT": 49578340
+    }
+*/
 const tickers = {
 }
 
+/*
+    Iterate over each transaction and either create, or update, the
+    key/value pair in `tickers` (see above) to hold the total valuation
+    of each stock in my portfolio
+*/
 FinancialAdvisor.portfolio.forEach(
     transaction => {
         if (!(transaction.ticker in tickers)) {
@@ -28,4 +42,9 @@ FinancialAdvisor.portfolio.forEach(
     }
 )
 
-console.log(tickers)
+/*
+    Using the `tickers` data structure, build a DOM component
+    representing each stock I own and its total valuation
+
+    "I own {stock} and it is currently worth {value}"
+*/
