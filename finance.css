@@ -1,0 +1,6 @@
+.card {
+    border: 1px dotted gray;
+    padding: 20px;
+    margin: 0 0 15px 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
